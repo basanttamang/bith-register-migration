@@ -1,0 +1,68 @@
+{
+ "A_counts": {
+  "source": 2000,
+  "migrated": 1883,
+  "rejected": 60,
+  "duplicate_review": 57,
+  "balanced": true
+ },
+ "B_each_row_once": {
+  "rows_accounted": 2000,
+  "rows_counted_twice": 0,
+  "rows_missing": 0,
+  "pass": true
+ },
+ "C_checksum": {
+  "expected_sha256": "e541db73b6dfbe04",
+  "database_sha256": "e541db73b6dfbe04",
+  "records_compared": 1883,
+  "mismatches": 0,
+  "pass": true
+ },
+ "D_spot_check": "output/spot_check.csv (20 rows to check by eye)",
+ "E_detection": {
+  "invalid_dob (rejected R2)": {
+   "planted": 10,
+   "caught": 10,
+   "not_caught_by_this_rule": []
+  },
+  "future_dob (rejected R2)": {
+   "planted": 5,
+   "caught": 5,
+   "not_caught_by_this_rule": []
+  },
+  "missing_ward (rejected R3)": {
+   "planted": 30,
+   "caught": 30,
+   "not_caught_by_this_rule": []
+  },
+  "invalid_ward (rejected R3)": {
+   "planted": 15,
+   "caught": 15,
+   "not_caught_by_this_rule": []
+  },
+  "duplicate pairs (held for review R6)": {
+   "planted_pairs": 60,
+   "caught": 57,
+   "not_caught": [
+    "row 551 rejected first by R3",
+    "row 1865 rejected first by R3",
+    "row 1129 rejected first by R3"
+   ]
+  },
+  "invalid_phone (warning R4)": {
+   "planted": 40,
+   "caught": 38,
+   "not_caught_by_this_rule": [
+    "row 649 rejected first by R3",
+    "row 682 rejected first by R2"
+   ]
+  }
+ },
+ "E_false_alarms": {
+  "rejected_but_not_planted": 0,
+  "held_as_duplicate_but_not_planted": 0
+ },
+ "E_note": "Each row stops at the first rule it fails, so a planted problem can be reported by an earlier rule instead. Anything marked NOT CAUGHT is a real gap in the rules.",
+ "all_pass": true
+}

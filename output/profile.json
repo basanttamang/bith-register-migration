@@ -1,0 +1,81 @@
+{
+ "rows": 2000,
+ "columns": [
+  "reg_no",
+  "child_name",
+  "sex",
+  "dob",
+  "father_name",
+  "mother_name",
+  "ward_no",
+  "tole",
+  "informant_phone",
+  "registered_on"
+ ],
+ "blank_values": {
+  "reg_no": 0,
+  "child_name": 0,
+  "sex": 12,
+  "dob": 3,
+  "father_name": 0,
+  "mother_name": 0,
+  "ward_no": 30,
+  "tole": 0,
+  "informant_phone": 120,
+  "registered_on": 0
+ },
+ "dob_formats": {
+  "YYYY/MM/DD (BS)": 908,
+  "YYYY-MM-DD (AD)": 593,
+  "DD-MM-YYYY (BS)": 284,
+  "DD/MM/YYYY (AD)": 211,
+  "blank": 3,
+  "unrecognised": 1
+ },
+ "dob_problems": {
+  "future": 5,
+  "unrecognised format": 1,
+  "not a real date": 6,
+  "blank": 3
+ },
+ "ward": {
+  "valid": 1955,
+  "missing": 30,
+  "out of range": 15
+ },
+ "phone": {
+  "reformatted": 630,
+  "ok": 1210,
+  "missing": 120,
+  "invalid": 40
+ },
+ "sex_values": {
+  "M": 697,
+  "F": 702,
+  "female": 93,
+  "Female": 100,
+  "Male": 92,
+  "male": 91,
+  "f": 92,
+  "m": 121,
+  "(blank)": 12
+ },
+ "reg_no_unique": true,
+ "likely_duplicate_groups": 60,
+ "likely_duplicate_extra_rows": 60,
+ "duplicate_examples": [
+  [
+   "BR-2076-0011 | Dipa Shakya",
+   "BR-2076-0602 | Dipa Shakya"
+  ],
+  [
+   "BR-2079-0018 | Sita Devi Thapa",
+   "BR-2079-1326 | Sita Devi Thapa"
+  ],
+  [
+   "BR-2080-0021 | Rajesh Shakya",
+   "BR-2080-1260 | Rajesh Shakya"
+  ]
+ ],
+ "child_names_needing_tidy": 25
+}
